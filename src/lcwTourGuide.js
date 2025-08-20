@@ -1,3 +1,9 @@
+/*!
+ * lcwTourGuide v1.0.0
+ * Author: Zaid Bin Khalid
+ * A lightweight JavaScript guided tour library
+ */
+
 class lcwTourGuide {
     constructor(options = {}) {
         this.steps = Array.from(document.querySelectorAll('[data-lcw-tour-step]')).sort((a, b) => a.dataset.tourStep - b.dataset.tourStep);
