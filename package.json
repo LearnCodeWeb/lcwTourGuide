@@ -1,0 +1,23 @@
+{
+    "name": "lcw-tour-guide",
+    "version": "1.0.0",
+    "description": "lcwTourGuide is a lightweight and customizable JavaScript guided tour library that allows you to highlight elements, show tooltips, and navigate users through step-by-step tours of your web application. Supports callbacks on start, step change, and completion.",
+    "main": "dist/lcwTourGuide.min.js",
+    "scripts": {
+        "build": "terser src/lcwTourGuide.js -o dist/lcwTourGuide.min.js --compress --mangle"
+    },
+    "keywords": [
+        "tour",
+        "javascript",
+        "guided-tour",
+        "plugin",
+        "tooltip",
+        "highlight"
+    ],
+    "author": "Zaid Bin Khalid",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "terser": "^5.20.0"
+    }
+}
