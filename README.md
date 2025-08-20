@@ -15,6 +15,14 @@
 ### Via CDN
 
 ```
+https://cdn.jsdelivr.net/gh/LearnCodeWeb/lcwTourGuide@v-1.0/src/lcwTourGuide.css
+```
+```
+https://cdn.jsdelivr.net/gh/LearnCodeWeb/lcwTourGuide@v-1.0/src/lcwTourGuide.js
+```
+
+# HTML
+```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LearnCodeWeb/lcwTourGuide@v-1.0/src/lcwTourGuide.css">
 <script src="https://cdn.jsdelivr.net/gh/LearnCodeWeb/lcwTourGuide@v-1.0/src/lcwTourGuide.js"></script>
 ```
