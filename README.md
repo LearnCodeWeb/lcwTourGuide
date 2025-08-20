@@ -1,63 +1,50 @@
-Got it! Let’s create a **detailed GitHub README** for your library, now named **`lcwTourGuide`**. I’ll include title, description, features, installation, usage, options, styling, and contributing instructions.
+# lcwTourGuide
 
-````markdown
-# 🧭 lcwTourGuide  
+**lcwTourGuide** is a lightweight JavaScript library for creating guided tours on web pages. Easily highlight elements, add tooltips, and guide users through your UI with callbacks for start, step change, and end events.
 
-`lcwTourGuide` is a lightweight, dependency-free JavaScript library for creating guided tours and onboarding experiences on your website.  
-It highlights elements, shows tooltips, automatically positions them, and provides callback hooks for easy customization.  
+## Features
 
----
+- Highlight elements on your page.
+- Display tooltips with custom text.
+- Navigate steps with "Next" and "Previous".
+- Callbacks for `onStart`, `onStep`, and `onEnd`.
+- Easy to integrate via CDN or npm.
 
-## ✨ Features
-- 🚀 Pure JavaScript, no dependencies  
-- 🎯 Highlights target elements with an overlay  
-- 📜 Scrolls automatically to show the highlighted element and tooltip  
-- 🧩 Smart tooltip positioning (auto-adjusts above/below based on space)  
-- 🔄 Step navigation (`Next`, `Previous`, `Done`)  
-- ⚡ Callback hooks for `onStart`, `onStep`, `onEnd`  
-- 🎨 Fully customizable with CSS  
+## Installation
 
----
-
-## 📦 Installation
-
-Include the script and styles in your project:
+### Via CDN
 
 ```html
-<link rel="stylesheet" href="lcwTourGuide.css">
-<script src="lcwTourGuide.js"></script>
-````
+<link rel="stylesheet" href="https://yourusername.github.io/lcwTourGuide/src/lcwTourGuide.css">
+<script src="https://yourusername.github.io/lcwTourGuide/dist/lcwTourGuide.min.js"></script>
 
-Or copy the class code directly into your project.
 
----
 
 ## 🚀 Usage
 
 ### 1. Mark elements for the tour
 
-Add `data-tour-step` and `data-tour-text` attributes to elements:
+Add `data-lcw-tour-step` and `data-lcw-tour-text` attributes to elements:
 
-```html
-<button data-tour-step="1" data-tour-text="Click here to create a new item">
+```
+<button data-lcw-tour-step="1" data-lcw-tour-text="Click here to create a new item">
   New Item
 </button>
 
-<input type="text" data-tour-step="2" data-tour-text="Enter the name here">
+<input type="text" data-lcw-tour-step="2" data-lcw-tour-text="Enter the name here">
 
-<div data-tour-step="3" data-tour-text="Finally, click Save">
+<div data-lcw-tour-step="3" data-lcw-tour-text="Finally, click Save">
   Save
 </div>
 ```
 
-* `data-tour-step="1"` → defines the order
-* `data-tour-text="..."` → tooltip text
+* `data-lcw-tour-step="1"` → defines the order
+* `data-lcw-tour-text="..."` → tooltip text
 
----
 
 ### 2. Initialize the tour
 
-```js
+```
 document.addEventListener('DOMContentLoaded', () => {
   const tour = new lcwTourGuide({
     onStart: () => console.log("✅ Tour started"),
@@ -85,29 +72,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
 Default styles can be customized:
 
-```css
-.tour-tooltip {
-  background: #222;
-  color: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  max-width: 250px;
+```
+.lcw-tour-tooltip {
+    position: absolute;
+    background: #ffffff;
+    color: #444;
+    padding: 16px;
+    border-radius: 6px;
+    max-width: 280px;
+    z-index: 10001;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
-.tour-highlight {
-  box-shadow: 0 0 0 3px #00bcd4;
+
+.lcw-tour-tooltip button {
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
 }
-.tour-overlay {
-  background: rgba(0, 0, 0, 0.5);
+
+.lcw-tour-tooltip button:hover {
+    background: #0056b3;
+}
+
+.lcw-tour-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+}
+
+.lcw-tour-highlight {
+    position: relative;
+    z-index: 10002;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.7);
+    border-radius: 4px;
+    background-color: white;
+}
+
+.lcw-tour-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lcw-tour-close:hover {
+    color: #ff6b6b;
 }
 ```
-
----
-
-## 🛠 Example
-
-![demo gif placeholder](https://via.placeholder.com/600x300?text=lcwTourGuide+Demo)
-
----
 
 ## 📜 License
 
