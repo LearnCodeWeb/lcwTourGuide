@@ -14,10 +14,10 @@
 
 ### Via CDN
 
-```html
-<link rel="stylesheet" href="https://yourusername.github.io/lcwTourGuide/src/lcwTourGuide.css">
-<script src="https://yourusername.github.io/lcwTourGuide/dist/lcwTourGuide.min.js"></script>
-
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/LearnCodeWeb/lcwTourGuide@master/src/lcwTourGuide.css">
+<script src="https://cdn.jsdelivr.net/gh/LearnCodeWeb/lcwTourGuide@master/src/lcwTourGuide.js"></script>
+```
 
 
 ## 🚀 Usage
@@ -143,10 +143,3 @@ MIT License. Free to use in personal and commercial projects.
 
 Contributions, issues, and feature requests are welcome!
 Feel free to fork, improve, and submit pull requests.
-
-```
-
-If you want, I can also **update your JS code** so it uses the class name `lcwTourGuide` and integrates perfectly with this README, making it fully plugin-ready for GitHub.  
-
-Do you want me to do that?
-```
